@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-primary-light: #f0fdf4;
+  --color-primary: #22c55e;
+  --color-primary-dark: #166534;
+  --color-secondary-light: #fdfbf7;
+  --font-sans: 'Inter', sans-serif;
+}
+
+:root {
+  --color-primary-light: #f0fdf4;
+  --color-primary: #22c55e;
+  --color-primary-dark: #166534;
+  --color-secondary-light: #fdfbf7;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Base Styles */
+@layer base {
+  body {
+    background-color: var(--color-secondary-light);
+    color: #1f2937;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Components */
+@layer components {
+  .btn-primary {
+    @apply text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg transition-all font-semibold;
+    background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+  }
+
+  .card {
+    @apply rounded-3xl shadow-sm border border-gray-200 p-6;
+    background-color: #ffffff;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary transition placeholder:text-gray-400;
+    background-color: #ffffff;
+    color: #1f2937;
+  }
+
+  .page-container {
+    @apply max-w-5xl mx-auto px-4 py-8;
+  }
+}
